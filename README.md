@@ -1,30 +1,38 @@
 # srch
+
 A crossplatform search utility written for you who craves simplicity.
 
+![example output](example-output.png)
+
 # Install
+
 ### Required:
-[Rust](https://www.rust-lang.org/tools/install) 
+
+[Rust](https://www.rust-lang.org/tools/install)
 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ### Download:
+
 ```bash
 git clone https://github.com/Its-NEO/srch
 ```
 
 ### Build it
+
 ```bash
 cd srch
 cargo build
 ```
 
 ### Add binary to your $PATH
+
 ```bash
 cp target/debug/srch ~/.local/bin/
 ```
 
 # Basic Usage
 
-Search your filesystem for the file you're looking for. 
+Search your filesystem for the file you're looking for.
 
 ```bash
 >> srch hello
@@ -35,11 +43,14 @@ Searched through 29 file(s) and 27 folder(s) in 1 ms and found 2 results.
 ```
 
 ### Arguments
+
 \<PATTERN\>
-The pattern you want to search for 
+The pattern you want to search for
 
 ### Options
-+ -d, --depth \<DEPTH\> -- How deep do you want to dig into? \[default: 3\]
+
+- -d, --depth \<DEPTH\> -- How deep do you want to dig into? \[default: 3\]
+
 ```bash
 >> srch hello -d 5
 ./codespace/c/hello
@@ -51,8 +62,9 @@ The pattern you want to search for
 
 Searched through 97 file(s) and 75 folder(s) in 6 ms and found 6 results.
 ```
-	
-+ --infile -- Search through text-based file's contents
+
+- --infile -- Search through text-based file's contents
+
 ```bash
 >> srch hello --infile
 ./Downloads/Rust Playground_files/810c47919634786ee601.js:40760:12
@@ -66,7 +78,9 @@ Searched through 97 file(s) and 75 folder(s) in 6 ms and found 6 results.
 
 Searched through 29 file(s) and 27 folder(s) in 18 ms and found 8 results.
 ```
-+ -i, --useignore -- Use ignore files to ignore certain files and folders
+
+- -i, --useignore -- Use ignore files to ignore certain files and folders
+
 ```bash
 >> ls
 codespace  Desktop  Downloads  out.txt  Packages  Snapshots  Wallpapers
@@ -79,8 +93,10 @@ Searched through 29 file(s) and 27 folder(s) in 1 ms and found 2 results.
 >> srch hello --useignore
 
 Searched through 26 file(s) and 7 folder(s) in 0 ms and found 0 results.
-``` 
-+ -a, --all -- Include hidden folders
+```
+
+- -a, --all -- Include hidden folders
+
 ```bash
 >> srch hello --infile
 ./Downloads/Rust Playground_files/810c47919634786ee601.js:42421:12
@@ -113,7 +129,9 @@ Searched through 29 file(s) and 27 folder(s) in 16 ms and found 7 results.
 
 Searched through 431 file(s) and 958 folder(s) in 41 ms and found 318 results.
 ```
-+ -h, --help -- Print help
+
+- -h, --help -- Print help
+
 ```bash
 A feature-rich search tool to find all you want.
 
@@ -130,7 +148,9 @@ Options:
   -h, --help           Print help
   -V, --version        Print version
 ```
-+ -V, --version -- Print Version
+
+- -V, --version -- Print Version
+
 ```bash
 srch 1.0
 ```
